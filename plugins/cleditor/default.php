@@ -97,7 +97,9 @@ a.PreviewButton {
 		// Attach the editor to comment boxes
 		jQuery("#Form_Body").livequery(function() {
 			var frm = $(this).parents("div.CommentForm");
-			ed = jQuery(this).cleditor({width:"100%", height:"100%"})[0];
+			ed = jQuery(this).cleditor({width:"100%", height:"100%", controls: "bold italic underline strikethrough | " +
+          "color highlight removeformat | bullets numbering | " +          
+          "rule image link unlink ",})[0];
 			this.editor = ed; // Support other plugins!
 			jQuery(frm).bind("clearCommentForm", {editor:ed}, function(e) {
 				frm.find("textarea").hide();

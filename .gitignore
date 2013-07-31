@@ -1,3 +1,4 @@
 conf/config.php
 uploads/
 cache/*.ini
+cache/Smarty/compile/*.php
